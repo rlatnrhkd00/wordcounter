@@ -1,5 +1,63 @@
-<h1>About</h1>
+<!DOCTYPE html>
+<html>
+<head>
+        {% load staticfiles %}
+        <style>
+                p{font-size: x-large }
+            </style>
+    <script  src="https://code.jquery.com/jquery-3.4.0.js"  
+    integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+    crossorigin="anonymous"></script> 
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-<a href="{%url 'home'%}">HOME</a>
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<p> 안녕하세요, 이곳을 글자를 세주는 곳입니다.</p>
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+   
+
+    <meta charset="UTF-8">
+    <title>나를 소개해요</title>
+</head>
+<body style="background-color:beige; margin: 15px 25px 15px 0px; padding: 10px;">
+    <div class="container">
+       
+            <ul class="nav nav-tabs">
+            <li role="presentation" ><a href="{%url 'home'%}">Home</a></li>
+            <li role="presentation" class="active"><a href="{%url 'about'%}">About</a></li>
+            <li role="presentation" ><a href="{%url 'result'%}">결과</a></li>
+          </ul><br><br>
+          <center>
+                <h1 style="  
+                font-weight: bold;  "> 단어 세주는 프로그램이란? </h1>
+                <br>
+                <span style="
+                        font-size: 1.3em;
+                        line-height: 2.0em;  
+                        color: darkslategray;
+                        "><br>
+                      <p>입력한 텍스트의 단어를 세주는 프로그램 입니다.</p>   <br><br><br><br>
+                              
+                        </span>
+                        <h1 font-weight: bold; ><사용법></h1>
+                        <span style="
+                        font-size: 1.3em;
+                        line-height: 2.0em;  
+                        color: darkslategray;
+                        "><br>
+                        <p>입력공간에 입력 후 글자수 세기 버튼 클릭</p> <br>
+                              
+                        </span>
+                        <img src="{% static '2.png' %}" height="500" width="500"/>
+                        <img src="{% static '1.PNG' %}" height="500" width="500"/>
+
+          
+        </center>
+        
+              
+    </div>
+</body>
+</html>

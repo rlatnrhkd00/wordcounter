@@ -1,11 +1,59 @@
-<h1>당신이 입력한 텍스트는 {{total}}개로 구성되어 있습니다.</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p{font-size: x-large }
+    </style>
+    <script  src="https://code.jquery.com/jquery-3.4.0.js"  
+    integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+    crossorigin="anonymous"></script> 
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-<a href = "{% url 'home' %}">다시하기</a>
-<br>
-<h2>입력한 텍스트 : </h2>
-{{full}}
-<h2>단어 카운트 : </h2>
-{% for word, many in dictionary %}
-{{word}} : {{many}}
-<br>
-{%endfor%}
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+   
+
+    <meta charset="UTF-8">
+    <title>나를 소개해요</title>
+</head>
+<body style="background-color:beige; margin: 15px 25px 15px 0px; padding: 10px;">
+    <div class="container">
+       
+            <ul class="nav nav-tabs">
+            <li role="presentation" ><a href="{%url 'home'%}">Home</a></li>
+            <li role="presentation" ><a href="{%url 'about'%}">About</a></li>
+            <li role="presentation" class="active" ><a href="{%url 'result'%}">결과</a></li>
+          </ul><br><br>
+          <center>
+                <h1 style=" 
+                font-weight: bold;  ">당신이 입력한 텍스트는 {{total}}개로 구성되어 있습니다.</h1><br><br>
+
+               
+
+               
+               
+
+          
+        </center>
+        <br>
+        <h2>< 입력한 텍스트 ></h2>
+       <p> {{full}}<br><br></p>
+        <h2>  <단어 카운트 > </h2>
+       <p>{% for word, many in dictionary %}
+            {{word}} : {{many}}
+            <br>
+            {%endfor%}</p> 
+            <br>
+        <form action="{% url 'home'%}">
+                <button  type="submit" cols="10" rows="5" >다시하기</button>
+            </form>
+        
+              
+    </div>
+</body>
+</html>

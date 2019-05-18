@@ -1,8 +1,45 @@
-<h1> 여기서 단어 세세용! </h1>
-<a href="{%url 'about'%}">ABOUT</a>
+<!DOCTYPE html>
+<html>
+<head>
+    <script  src="https://code.jquery.com/jquery-3.4.0.js"  
+    integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+    crossorigin="anonymous"></script> 
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-<form action="{% url 'result'%}">
-    <textarea cols="40" rows="10" name="text"></textarea>
-    <br>
-    <input type="submit" value="Count!">
-</form>
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+   
+
+    <meta charset="UTF-8">
+    <title>나를 소개해요</title>
+</head>
+<body style="background-color:beige; margin: 15px 25px 15px 0px; padding: 10px;">
+    <div class="container">
+       
+            <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="{%url 'home'%}">Home</a></li>
+            <li role="presentation" ><a href="{%url 'about'%}">About</a></li>
+            <li role="presentation" ><a href="{%url 'result'%}">결과</a></li>
+          </ul><br><br>
+          <center>
+                <h1 style=" 
+                font-weight: bold;  "> 단어 세주는 프로그램 </h1>
+                <br>
+                <form action="{% url 'result'%}">
+                    <textarea cols="100" rows="30" name="text"></textarea>
+                    <br> <br>
+                    <input type="submit" cols="10" rows="5" value=" 글자수 세기 ">
+                </form>
+
+          
+        </center>
+        
+              
+    </div>
+</body>
+</html>
